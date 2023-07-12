@@ -136,9 +136,8 @@ h3 {
 	font-weight: 500;
 	line-height: 1.5;
 	transition-property: color, text-decoration;
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0ms, 150ms;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover,
@@ -174,9 +173,8 @@ h3 {
 	font-size: 16px;
 	line-height: 1.5;
 	transition-property: color;
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0ms, 150ms;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -198,6 +196,7 @@ h3 {
 		),
 		url(../images/people-office.jpg);
 	padding: 188px 0;
+	max-width: 1440px;
 }
 
 .hero-container {
@@ -234,9 +233,8 @@ h3 {
 	cursor: pointer;
 	font-family: 'Roboto', sans-serif;
 	transition-property: background-color;
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0ms, 150ms;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -359,9 +357,8 @@ h3 {
 	background-color: var(--iris);
 	fill: var(--cloud);
 	transition-property: background-color;
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0ms, 150ms;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-link:hover,
@@ -401,9 +398,8 @@ h3 {
 	border: 1px solid var(--lightslate);
 	fill: var(--lightslate);
 	transition-property: border, fill;
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0ms, 150ms;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
@@ -477,9 +473,8 @@ footer {
 	border-radius: 50%;
 	fill: var(--cloud);
 	transition-property: background-color;
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0ms, 150ms;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover,
@@ -515,6 +510,9 @@ footer {
 	line-height: 1.5;
 	letter-spacing: 0.04em;
 	cursor: pointer;
+	transition-property: color, background-color, border, box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -522,6 +520,8 @@ footer {
 	color: var(--white);
 	background-color: var(--ocean);
 	border: 1px solid transparent;
+	box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+		0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-list-header {
@@ -546,8 +546,39 @@ footer {
 	gap: 32px;
 }
 
+.portfolio-card:hover,
+.portfolio-card:focus {
+	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+		0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+		0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.portfolio-card:hover .cover-text {
+	transform: translateY(0);
+}
 .portfolio-container {
 	padding: 32px 16px;
 	border: 1px solid #e7e9fc;
 	border-top: none;
+}
+
+.cover-container {
+	position: relative;
+	overflow: hidden;
+}
+.cover-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	padding: 40px 32px 164px 32px;
+	color: var(--cloud);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	background-color: var(--iris);
+	transform: translateY(100%);
+	transition-property: transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
