@@ -552,9 +552,14 @@ footer {
 		0px 1px 1px 0px rgba(46, 47, 66, 0.16),
 		0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
-.portfolio-card:hover .cover-text {
+.portfolio-link:hover .cover-text {
 	transform: translateY(0);
 }
+
+.portfolio-link:focus .cover-text {
+	transform: translateY(0);
+}
+
 .portfolio-container {
 	padding: 32px 16px;
 	border: 1px solid #e7e9fc;
